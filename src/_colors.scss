@@ -1,0 +1,49 @@
+$primaryVar: --primary;
+$errorVar: --error;
+$successVar: --success;
+$warningVar: --warning;
+$backgroundVar: --background;
+
+$primaryVal: #79f;
+$errorVal: #f5e;
+$successVal: #ef5;
+$warningVal: #fd5;
+$backgroundVal: #def;
+
+:root {
+  --primary: #79f;
+  --error: #f5e;
+  --success: #ef5;
+  --warning: #fd5;
+  --background: #def;
+
+  background-color: var(--background);
+}
+
+$colorsVar: (
+  primary: var($primaryVar),
+  error: var($errorVar),
+  success: var($successVar),
+  warning: var($warningVar),
+  background: var($backgroundVar)
+);
+
+@each $key, $color in $colorsVar {
+  .#{$key} {
+    background-color: $color;
+  }
+}
+
+$colorsVal: (
+  primary: $primaryVal,
+  error: $errorVal,
+  success: $successVal,
+  warning: $warningVal,
+  background: $backgroundVal
+);
+
+@each $key, $color in $colorsVal {
+  .#{$key}:hover {
+    background-color: darken($color, $amount: 30);
+  }
+}

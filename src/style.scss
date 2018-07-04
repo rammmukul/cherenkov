@@ -1,0 +1,21 @@
+@import "colors";
+
+.container {
+  display: grid;
+  flex-wrap: wrap;
+  background-color: var(--background);
+}
+
+.row {
+  max-width: 1fr;
+  min-width: 1fr;
+}
+
+button, [type="button"], [type="submit"] {
+  box-sizing: border-box;
+  border: .1rem;
+  padding: .4rem 1rem;
+  height: 2rem;
+  width: auto;
+  align-content: space-around;
+}

@@ -1,0 +1,70 @@
+:root {
+  --primary: #79f;
+  --error: #f5e;
+  --success: #ef5;
+  --warning: #fd5;
+  --background: #def;
+  background-color: var(--background);
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.error {
+  background-color: var(--error);
+}
+
+.success {
+  background-color: var(--success);
+}
+
+.warning {
+  background-color: var(--warning);
+}
+
+.background {
+  background-color: var(--background);
+}
+
+.primary:hover {
+  background-color: #0037dd;
+}
+
+.error:hover {
+  background-color: #bb00a8;
+}
+
+.success:hover {
+  background-color: #a8bb00;
+}
+
+.warning:hover {
+  background-color: #bb9600;
+}
+
+.background:hover {
+  background-color: #44a2ff;
+}
+
+.container {
+  display: grid;
+  flex-wrap: wrap;
+  background-color: var(--background);
+}
+
+.row {
+  max-width: 1fr;
+  min-width: 1fr;
+}
+
+button, [type=button], [type=submit] {
+  box-sizing: border-box;
+  border: 0.1rem;
+  padding: 0.4rem 1rem;
+  height: 2rem;
+  width: auto;
+  align-content: space-around;
+}
+
+/*# sourceMappingURL=style.css.map */
