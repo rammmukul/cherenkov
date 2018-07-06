@@ -1,14 +1,200 @@
 :root {
-  --primary: #79f;
-  --error: #f5e;
-  --success: #ef5;
+  --background: #eef;
+}
+
+:root {
+  --error: #f57;
+}
+
+:root {
+  --success: #8f5;
+}
+
+:root {
   --warning: #fd5;
-  --background: #def;
+}
+
+:root {
+  --primary: #79f;
+}
+
+:root {
   background-color: var(--background);
+}
+
+button {
+  background-color: var(--primary);
+}
+
+[type=button] {
+  background-color: var(--primary);
+}
+
+[type=submit] {
+  background-color: var(--primary);
+}
+
+[type=text] textarea:hover, [type=text] textarea, input:hover, input, .primary:hover, .warning:hover, .success:hover, .error:hover, .background:hover, [type=submit].primary, [type=submit].warning, [type=submit].success, [type=submit].error, [type=submit].background, [type=button].primary, [type=button].warning, [type=button].success, [type=button].error, [type=button].background, button.primary, button.warning, button.success, button.error, button.background, [type=submit]:hover, [type=submit], [type=button]:hover, [type=button], button:hover, button {
+  box-sizing: content-box;
+  padding: 0.2rem 1rem;
+  width: auto;
+  height: 2rem;
+}
+
+[type=submit]:hover, [type=submit], [type=button]:hover, [type=button], button:hover, button {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+[type=submit]:hover, [type=submit], [type=button]:hover, [type=button], button, button:hover {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+}
+
+[type=button]:hover {
+  filter: brightness(1.2);
+}
+
+[type=submit]:hover, [type=submit], button, button:hover, [type=button], [type=button]:hover {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+}
+
+[type=submit]:hover {
+  filter: brightness(1.2);
+}
+
+button.background {
+  border: 0.1rem solid var(--background);
+  background-color: var(--background);
+}
+
+button.error {
+  border: 0.1rem solid var(--error);
+  background-color: var(--error);
+}
+
+button.success {
+  border: 0.1rem solid var(--success);
+  background-color: var(--success);
+}
+
+button.warning {
+  border: 0.1rem solid var(--warning);
+  background-color: var(--warning);
+}
+
+button.primary {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+}
+
+[type=button].background {
+  border: 0.1rem solid var(--background);
+  background-color: var(--background);
+}
+
+[type=button].error {
+  border: 0.1rem solid var(--error);
+  background-color: var(--error);
+}
+
+[type=button].success {
+  border: 0.1rem solid var(--success);
+  background-color: var(--success);
+}
+
+[type=button].warning {
+  border: 0.1rem solid var(--warning);
+  background-color: var(--warning);
+}
+
+[type=button].primary {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+}
+
+[type=submit].background {
+  border: 0.1rem solid var(--background);
+  background-color: var(--background);
+}
+
+[type=submit].error {
+  border: 0.1rem solid var(--error);
+  background-color: var(--error);
+}
+
+[type=submit].success {
+  border: 0.1rem solid var(--success);
+  background-color: var(--success);
+}
+
+[type=submit].warning {
+  border: 0.1rem solid var(--warning);
+  background-color: var(--warning);
+}
+
+[type=submit].primary {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+}
+
+.background {
+  background-color: var(--background);
+}
+
+.background:hover {
+  border: 0.1rem solid var(--background);
+  background-color: var(--background);
+  filter: brightness(1.2);
+}
+
+.error {
+  background-color: var(--error);
+}
+
+.error:hover {
+  border: 0.1rem solid var(--error);
+  background-color: var(--error);
+  filter: brightness(1.2);
+}
+
+.success {
+  background-color: var(--success);
+}
+
+.success:hover {
+  border: 0.1rem solid var(--success);
+  background-color: var(--success);
+  filter: brightness(1.2);
+}
+
+.warning {
+  background-color: var(--warning);
+}
+
+.warning:hover {
+  border: 0.1rem solid var(--warning);
+  background-color: var(--warning);
+  filter: brightness(1.2);
 }
 
 .primary {
   background-color: var(--primary);
+}
+
+.primary:hover {
+  border: 0.1rem solid var(--primary);
+  background-color: var(--primary);
+  filter: brightness(1.2);
+}
+
+.background {
+  background-color: var(--background);
 }
 
 .error {
@@ -23,48 +209,299 @@
   background-color: var(--warning);
 }
 
-.background {
-  background-color: var(--background);
-}
-
-.primary:hover {
-  background-color: #0037dd;
-}
-
-.error:hover {
-  background-color: #bb00a8;
-}
-
-.success:hover {
-  background-color: #a8bb00;
-}
-
-.warning:hover {
-  background-color: #bb9600;
+.primary {
+  background-color: var(--primary);
 }
 
 .background:hover {
-  background-color: #44a2ff;
+  filter: brightness(1.2);
+}
+
+.background:active {
+  filter: brightness(0.8);
+}
+
+.error:hover {
+  filter: brightness(1.2);
+}
+
+.error:active {
+  filter: brightness(0.8);
+}
+
+.success:hover {
+  filter: brightness(1.2);
+}
+
+.success:active {
+  filter: brightness(0.8);
+}
+
+.warning:hover {
+  filter: brightness(1.2);
+}
+
+.warning:active {
+  filter: brightness(0.8);
+}
+
+.primary:hover {
+  filter: brightness(1.2);
+}
+
+.primary:active {
+  filter: brightness(0.8);
+}
+
+input {
+  border: 0.1rem solid #0037dd;
+  background-color: var(--primary);
+  filter: brightness(1.6);
+}
+
+input:hover {
+  border: 0.1rem solid #0037dd;
+  background-color: var(--primary);
+  filter: brightness(1.4);
+}
+
+[type=text] textarea {
+  border: 0.1rem solid #0037dd;
+  background-color: var(--primary);
+  filter: brightness(1.6);
+}
+
+[type=text] textarea:hover {
+  border: 0.1rem solid #0037dd;
+  background-color: var(--primary);
+  filter: brightness(1.4);
+}
+
+button {
+  filter: brightness(1);
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:active {
+  background-color: var(--primary);
+  filter: brightness(0.8);
+}
+
+[type=button] {
+  filter: brightness(1);
+}
+
+[type=button]:hover {
+  filter: brightness(1.2);
+}
+
+[type=button]:active {
+  background-color: var(--primary);
+  filter: brightness(0.8);
+}
+
+[type=submit] {
+  filter: brightness(1);
+}
+
+[type=submit]:hover {
+  filter: brightness(1.2);
+}
+
+[type=submit]:active {
+  background-color: var(--primary);
+  filter: brightness(0.8);
+}
+
+input {
+  background-color: var(--primary);
+}
+
+[type=text] textarea {
+  background-color: var(--primary);
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  font-size: 16px;
 }
 
 .container {
   display: grid;
-  flex-wrap: wrap;
-  background-color: var(--background);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: stretch;
+  align-items: center;
+  grid-gap: 1rem 1rem;
+  gap: 1rem 1rem;
 }
 
-.row {
-  max-width: 1fr;
-  min-width: 1fr;
+@media (min-width: 200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(80px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+  }
+}
+@media (min-width: 400px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+  }
+}
+@media (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+  }
+}
+@media (min-width: 2400px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(80px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+  }
+}
+.size-1 {
+  grid-column-end: span 1;
 }
 
-button, [type=button], [type=submit] {
-  box-sizing: border-box;
-  border: 0.1rem;
-  padding: 0.4rem 1rem;
-  height: 2rem;
-  width: auto;
-  align-content: space-around;
+.col-1 {
+  grid-column-start: 1;
+}
+
+.size-2 {
+  grid-column-end: span 2;
+}
+
+.col-2 {
+  grid-column-start: 2;
+}
+
+.size-3 {
+  grid-column-end: span 3;
+}
+
+.col-3 {
+  grid-column-start: 3;
+}
+
+.size-4 {
+  grid-column-end: span 4;
+}
+
+.col-4 {
+  grid-column-start: 4;
+}
+
+.size-5 {
+  grid-column-end: span 5;
+}
+
+.col-5 {
+  grid-column-start: 5;
+}
+
+.size-6 {
+  grid-column-end: span 6;
+}
+
+.col-6 {
+  grid-column-start: 6;
+}
+
+.size-7 {
+  grid-column-end: span 7;
+}
+
+.col-7 {
+  grid-column-start: 7;
+}
+
+.size-8 {
+  grid-column-end: span 8;
+}
+
+.col-8 {
+  grid-column-start: 8;
+}
+
+.size-9 {
+  grid-column-end: span 9;
+}
+
+.col-9 {
+  grid-column-start: 9;
+}
+
+.size-10 {
+  grid-column-end: span 10;
+}
+
+.col-10 {
+  grid-column-start: 10;
+}
+
+.size-11 {
+  grid-column-end: span 11;
+}
+
+.col-11 {
+  grid-column-start: 11;
+}
+
+.size-12 {
+  grid-column-end: span 12;
+}
+
+.col-12 {
+  grid-column-start: 12;
 }
 
 /*# sourceMappingURL=style.css.map */

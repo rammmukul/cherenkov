@@ -1,49 +1,131 @@
-$primaryVar: --primary;
-$errorVar: --error;
-$successVar: --success;
-$warningVar: --warning;
-$backgroundVar: --background;
+@import 'elements';
 
-$primaryVal: #79f;
-$errorVal: #f5e;
-$successVal: #ef5;
-$warningVal: #fd5;
-$backgroundVal: #def;
+$primaryColor: #79f;
+$errorColor: #f57;
+$successColor: #8f5;
+$warningColor: #fd5;
+$backgroundColor: #eef;
 
-:root {
-  --primary: #79f;
-  --error: #f5e;
-  --success: #ef5;
-  --warning: #fd5;
-  --background: #def;
-
-  background-color: var(--background);
-}
-
-$colorsVar: (
-  primary: var($primaryVar),
-  error: var($errorVar),
-  success: var($successVar),
-  warning: var($warningVar),
-  background: var($backgroundVar)
+$colors: (
+  background: $backgroundColor,
+  error: $errorColor,
+  success: $successColor,
+  warning: $warningColor,
+  primary: $primaryColor
 );
 
-@each $key, $color in $colorsVar {
-  .#{$key} {
-    background-color: $color;
+@each $var, $color in $colors {
+  :root {
+    --#{$var}: #{$color};
   }
 }
 
-$colorsVal: (
-  primary: $primaryVal,
-  error: $errorVal,
-  success: $successVal,
-  warning: $warningVal,
-  background: $backgroundVal
-);
+:root {
+  background-color: var(--background);
+}
 
-@each $key, $color in $colorsVal {
-  .#{$key}:hover {
-    background-color: darken($color, $amount: 30);
+@each $button in $buttons {
+  #{$button} {
+    background-color: var(--primary);
+  }
+}
+
+%shared {
+  box-sizing: content-box;
+  padding: .2rem 1rem;
+  width: auto;
+  height: 2rem;
+}
+
+@each $button in $buttons {
+  %shared-button {
+    @extend %shared;
+    border: .1rem solid var(--primary);
+    background-color: var(--primary);
+  }
+
+  #{$button} {
+    @extend %shared-button;
+  }
+
+  #{$button}:hover {
+    @extend %shared-button;
+    filter: brightness(1.2);
+  }
+}
+
+@each $button in $buttons {
+  @each $var, $color in $colors {
+    #{$button}.#{$var} {
+      @extend %shared;
+      border: .1rem solid var(--#{$var});
+      background-color: var(--#{$var});
+    }
+  }
+}
+
+@each $var, $color in $colors {
+  .#{$var} {
+    background-color: var(--#{$var});
+  }
+
+  .#{$var}:hover {
+    @extend %shared;
+    border: .1rem solid var(--#{$var});
+    background-color: var(--#{$var});
+    filter: brightness(1.2);
+  }
+}
+
+@each $var, $color in $colors {
+  .#{$var} {
+    background-color: var(--#{$var});
+  }
+}
+
+@each $var, $color in $colors {
+  .#{$var}:hover {
+    filter: brightness(1.2);
+  }
+
+  .#{$var}:active {
+    filter: brightness(.8);
+  }
+}
+
+@each $inputElement in $inputElements {
+  #{$inputElement} {
+    @extend %shared;
+    border: .1rem solid darken($primaryColor, $amount: 30);
+    background-color: var(--primary);
+    filter: brightness(1.6);
+  }
+
+  #{$inputElement}:hover {
+    @extend %shared;
+    border: .1rem solid darken($primaryColor, $amount: 30);
+    background-color: var(--primary);
+    filter: brightness(1.4);
+  }
+}
+
+@each $button in $buttons {
+  #{$button} {
+    filter: brightness(1);
+  }
+
+  #{$button}:hover {
+    filter: brightness(1.2);
+  }
+
+  #{$button}:active {
+    background-color: var(--primary);
+    filter: brightness(.8);
+  }
+}
+
+@each $inputElement in $inputElements {
+  #{$inputElement} {
+    background-color: var(--primary);
   }
 }
