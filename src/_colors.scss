@@ -30,13 +30,6 @@ $colors: (
   }
 }
 
-%shared {
-  box-sizing: content-box;
-  padding: .2rem 1rem;
-  width: auto;
-  height: 2rem;
-}
-
 @each $button in $buttons {
   %shared-button {
     @extend %shared;
@@ -57,7 +50,6 @@ $colors: (
 @each $button in $buttons {
   @each $var, $color in $colors {
     #{$button}.#{$var} {
-      @extend %shared;
       border: .1rem solid var(--#{$var});
       background-color: var(--#{$var});
     }
@@ -70,7 +62,6 @@ $colors: (
   }
 
   .#{$var}:hover {
-    @extend %shared;
     border: .1rem solid var(--#{$var});
     background-color: var(--#{$var});
     filter: brightness(1.2);
@@ -126,6 +117,7 @@ $colors: (
 
 @each $inputElement in $inputElements {
   #{$inputElement} {
+    @extend %shared;
     background-color: var(--primary);
   }
 }

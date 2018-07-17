@@ -7,5 +7,39 @@ $buttons: (
 $inputElements: (
     'input',
     '[type="text"]'
-    'textarea'
 );
+
+.textarea {
+    padding: .2rem 1rem;
+}
+
+%shared {
+    box-sizing: content-box;
+    margin: .2rem;
+    padding: .2rem 1rem;
+    width: auto;
+    height: 2rem;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+    z-index: 10000;
+    display: grid;
+    padding: .5rem;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: 1fr;
+    justify-items: stretch;
+    align-items: center;
+    grid-gap: 1rem 1rem;
+    gap: 1rem 1rem;
+}
+
+a {
+    color: #007;
+}
+
+a:hover {
+    color: #447;
+}
